@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-表单布局-水平表单</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!-- 水平表单，左侧为label，右侧为输入/选择组件，在登录/注册页面最常见-->
+    <form class="form-horizontal container" action="#" role="form">
+        <h2 align="center">GitHub Sign in</h2>
+        <div class="form-group">
+            <label for="username" class="control-label col-lg-3">username</label>
+            <div class="col-lg-6">
+                <input type="text" id="username" class="form-control" placeholder="Please input" required="required"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="control-label col-lg-3">password</label>
+            <div class="col-lg-6">
+                <input type="password" id="password" class="form-control" placeholder="Please input" data-toggle="password" data-placement="before" required="required"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="chooseSex" class="control-label col-lg-3">sex</label>
+            <div class="col-lg-5" id="chooseSex">
+                <label class="radio-inline">
+                    <input type="radio" name="sex"/>Male
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="sex"/>Female
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="chooseCity" class="control-label col-lg-3">City</label>
+            <label id="chooseCity" class="col-lg-6">
+                <select class="form-control" required="required">
+                    <option style="display: none"></option>
+                    <option>Los Angeles</option>
+                    <option>Dallas</option>
+                    <option>Memphis</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="fillContent" class="control-label col-lg-3">Introduction</label>
+            <div class="col-lg-6">
+                <textarea id="fillContent" class="form-control" placeholder="Please fill in..." style="resize: none"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-8 col-lg-offset-5">
+                <button class="btn btn-primary">submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="js/jquery-3.6.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-show-password.js"></script>
+</html>

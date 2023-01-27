@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-表单布局-内联表单</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!-- 内联表单 各个元素显示在同一行 -->
+    <form class="form-inline container" action="/submit" style="background-color: #ce8483">
+        <div>
+            <h3 style="background-color: #e4b9c0;padding: 10px">Userinfo Config</h3>
+        </div>
+        <div class="form-group" style="padding: 10px">
+            <label for="username">USERNAME:</label>
+            <input type="text" id="username" class="form-control" placeholder="fill in username"/>
+        </div>
+        <div class="form-group" style="padding: 10px">
+            <label for="pwd">PASSWORD:</label>
+            <input type="password" id="pwd" class="form-control" placeholder="insert password"/>
+        </div>
+        <div class="form-group" style="padding: 10px">
+            <button class="form-control btn btn-danger">SUBMIT</button>
+        </div>
+    </form>
+</body>
+<script src="js/jquery-3.6.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-show-password.js"></script>
+</html>
