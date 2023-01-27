@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-栅格网格系统</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- xs 超小屏 sm 小屏 md 中屏 lg 大屏 -->
+            <!-- 注意，列(col)的总数不可超过12，否则自动换行 -->
+            <div class="col-lg-4" style="background-color: #c0a16b">
+                col-lg-4
+            </div>
+            <div class="col-lg-8" style="background-color: #5bc0de">
+                col-lg-8
+            </div>
+        </div>
+        <div class="row">
+            <!-- xs 超小屏 sm 小屏 md 中屏 lg 大屏 -->
+            <div class="col-lg-2" style="background-color: coral">
+                col-lg-2
+            </div>
+            <div class="col-lg-10" style="background-color: #e4b9c0">
+                col-lg-10
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" style="background-color: chartreuse">4</div>
+            <!-- col-lg-1 是该元素占据的宽度 col-lg-offset-3 是该元素便宜的量 -->
+            <div class="col-lg-1 col-lg-offset-3" style="background-color: #e4b9c0">offset</div>
+            <div class="col-lg-4" style="background-color: chartreuse">4</div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.6.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</html>
