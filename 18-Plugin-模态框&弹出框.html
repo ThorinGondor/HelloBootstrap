@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-Plugin-模态框&提示框</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!-- data-toggle 是触发的事件类型，可以是 tooltip、modal、collapse、popover等
+         data-target 指事件的目标，一起使用就是代表 data-target 所指的元素以 data-toggle 指定的形式显示
+         data-dismiss 是bootstrap里自定义的属性，给一个元素设置 data-dismiss 属性的话，可以通过点击该元素达到让目标消失的效果
+     -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">PRESS</button>
+    <!-- 也可以以 script 形式绑定模态框事件 -->
+    <button class="btn btn-primary" id="sadqdwq">PRESS</button>
+    <!-- 模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">模态框(Modal)标题</h4>
+                </div>
+                <div class="modal-body">modal body 添加一些文本</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-primary" id="submitBtn">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tooltip -->
+    <div class="container" style="padding: 100px 50px 10px;" >
+        <button type="button" class="btn btn-default" title="Popover title" data-trigger="hover"
+                data-container="body" data-toggle="popover" data-placement="left"
+                data-content="左侧的 Popover 中的一些内容">
+            左侧的 Popover
+        </button>
+        <button type="button" class="btn btn-primary" title="Popover title" data-trigger="hover"
+                data-container="body" data-toggle="popover" data-placement="top"
+                data-content="顶部的 Popover 中的一些内容">
+            顶部的 Popover
+        </button>
+        <button type="button" class="btn btn-success" title="Popover title" data-trigger="hover"
+                data-container="body" data-toggle="popover" data-placement="bottom"
+                data-content="底部的 Popover 中的一些内容">
+            底部的 Popover
+        </button>
+        <button type="button" class="btn btn-warning" title="Popover title" data-trigger="hover"
+                data-container="body" data-toggle="popover" data-placement="right"
+                data-content="右侧的 Popover 中的一些内容">
+            右侧的 Popover
+        </button>
+    </div>
+
+</body>
+<script src="js/jquery-3.6.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-show-password.js"></script>
+<script>
+    // 必须先引入弹出框插件，才能使用 toolTip
+    $(function (){
+        debugger;
+        $("[data-toggle='popover']").popover();
+    });
+    // 可以绑定按钮的点击事件
+    $("#sadqdwq").click(function () {
+        // 手动打开模态框
+        $("#myModal").modal('show');
+    });
+    $("#submitBtn").click(function () {
+        // 手动关闭模态框
+        $("#myModal").modal('hide');
+    })
+</script>
+</html>
